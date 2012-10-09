@@ -105,7 +105,7 @@ $tv->setValue($modx->resource->get('id'), $newValue); // set the new value and s
 $tv->save();
 
 /* to get a TV value for the current resource */
-???
+
 
 /* retrieve a number of TVs for resource */
 $results = array();
@@ -144,7 +144,7 @@ $users = $modx->getCollection('modUser',
 foreach ($users as $user) {
   $output .= '<p>Username: ' . $user->get('username') . '</p>';
 }
-return $output
+return $output;
 
 /* Get the user object for the creator of the current document */
 $user = $modx->resource->getOne('CreatedBy');
@@ -163,11 +163,11 @@ foreach ($resourceIds as $id) {
 /* XPDO  */
 /* ***************************************** */
 
-/* getObject  - get one table row */
-/* getCollection - get many table rows */
+/* getObject  - get one object/table row */
+/* getCollection - get many objects/table rows */
 /* getOne - get one related object */
 /* getMany - get many related objects */
-/* getCollectionGraph - ??? */
+/* getCollectionGraph - get many objects and their related  objects */
 
 
 /* other xpdo object methods */
