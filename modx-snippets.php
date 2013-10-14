@@ -200,6 +200,18 @@ $object->toArray();
 foreach ($modx->getIterator('modResource', array('parent' =>15)) as $res) { $res->set('template',5); $res->save(); }
 
 
+/* general xpdo query */
+$sql = 'SELECT * FROM `'.$modx->getOption(xPDO::OPT_TABLE_PREFIX).'site_htmlsnippets`';
+$result = $modx->query($sql);
+
+if (!is_object($result)) {
+   return 'No result!';
+}
+else {
+   while ($row = $q_chunks->fetch(PDO::FETCH_ASSOC))
+       // do something: $row['name'];
+   }
+}
 
 
 /* ***************************************** */
