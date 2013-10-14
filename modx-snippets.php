@@ -63,6 +63,8 @@ return $output;
 /* RESOURCES  */
 /* ***************************************** */
 
+$id = $modx->resource->get('id');
+
 /* Display a particular document */
 $resource = $modx->getObject('modResource', array('pagetitle'=>'MyDocument')); // with properties
 $resource = $modx->getObject('modResource', $resourceID); // with a document id
@@ -72,6 +74,7 @@ $output .= '<p>Content:' . $resource->get('content') . '</p>';
 /* change a resource property */
 $resource = $modx->getObject('modResource', $resourceID); // with a document id
 $resource->set('template', 7);
+$resource->save();
 
 /* get all published resources that have not been deleted */
 $resources = $modx->getCollection('modResource',
