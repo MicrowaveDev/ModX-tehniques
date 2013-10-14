@@ -59,6 +59,25 @@ foreach ($docs as $doc) {
     }
 return $output;
 
+
+/* ***************************************** */
+/* SNIPPETS  */
+/* ***************************************** */
+
+// class boilerplate for creating a class for use in a snippet
+// provides access to $modx object by reference and snippet properties
+class MyClass {
+    function __construct($modx, $scriptProperties) {
+        $this->modx =& $modx;
+        $this->props =& $scriptProperties;
+    }
+    public function init() {
+        $this->size = $this->props['size'];
+        $this->color = $this->props['color'];
+    }
+}
+
+
 /* ***************************************** */
 /* RESOURCES  */
 /* ***************************************** */
