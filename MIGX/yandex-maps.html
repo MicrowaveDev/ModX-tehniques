@@ -1,0 +1,29 @@
+<!-- To head: -->
+<!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
+
+<!-- To tpl chunk: -->
+[[+active:is=`1`:then=`
+    <h4 class="text-primary no-break">[[+title]]</h4>
+    [[+text]]
+    <p id="map[[+MIGX_id]]" style="width: 320px; height: 222px"></p>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map("map[[+MIGX_id]]", {
+                center: [ [[+coord_x]], [[+coord_y]] ],
+                zoom:[[+zoom:default:7]],
+                controls: ['smallMapDefaultSet']
+            });
+
+            myPlacemark = new ymaps.Placemark([ [[+coord_x]], [[+coord_y]] ], {
+                hintContent: "[[+hint_content]]",
+                balloonContent: "[[+balloon_content]]"
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+`]]
