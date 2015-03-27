@@ -3,6 +3,13 @@
 # tvs - tv fields
 
 $resource = $modx->newObject('modResource');
+
+$content = $options['content'];
+unset($options['content']);
+
+if(!$options['publishedon'])
+    $options['publishedon'] = date("Y-m-d H:i:s");
+
 $resource->fromArray($options);
 $resource->setContent($content);
 $resource->save();
