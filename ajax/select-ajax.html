@@ -1,0 +1,17 @@
+<!-- category - родитель, выбрав который мы должны будем получить в соседнем select список дочерних ресурсов -->
+<!-- section - дочерние ресурсы, список которых зависит от выбранного category(category для них - это parent)-->
+<!-- 12 - id ресурса, с типом содержимого JSON и содержащим сниппет [[!ajaxChildrenNames]] -->
+<!-- 10 - id шаблона, с которым ресурсы содержатся в родителе category -->
+
+<select class="ajax" name="category" data-to="section" data-template="10" data-depth="2" data-url="[[~12]]">
+   <option selected="selected">Категория</option>
+   [[!getResources? &parents=`20` &depth=`0` &tpl=`CategorySelectedOptionItem`]]
+</select>
+
+<!-- значение section-hidden применяется в JS коде, в котором ищеется id с именем data-to + '-hidden' -->
+<input type="hidden" id="section-hidden" value="[[+section]]"/>
+
+<!-- data-not-select - используется для установки из JS первого option с соответствующим содержанием -->
+<select name="section" data-not-select="Не выбрано">
+   <option selected="selected">Не выбрано</option>
+</select>
