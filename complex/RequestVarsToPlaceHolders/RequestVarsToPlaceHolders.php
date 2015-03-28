@@ -36,7 +36,7 @@ if($_GET){
                     $placeholders[$multiple_name.'_filter'] = $placeholders[$multiple_name.'_filter'] . '||'.$name.'==' . $val;
                 }
             }
-            //as example of result $placeholders[$multiple_name.'_filter'] : ,city==90||city==88
+            //as example of result $placeholders[$multiple_name.'_filter'] : [[+get.cities_filter]] ===> ',city==90||city==88'
             //applicable for getResources tvFilters: http://rtfm.modx.com/extras/revo/getresources
         }
     }
