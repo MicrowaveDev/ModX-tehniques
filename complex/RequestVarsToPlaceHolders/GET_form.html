@@ -1,0 +1,11 @@
+<form action="/search/" method="GET">
+    <input type="hidden" id="get-cities" value='[[+get.cities]]'/>
+    <!-- TO: <input type="hidden" id="get-cities" value="["90","88"]"> -->
+
+    <label><input type="checkbox" value="89" name="cities[]"> New-York</label>
+    <label><input type="checkbox" value="90" name="cities[]" checked="checked"> Seattle</label>
+    <label><input type="checkbox" value="91" name="cities[]"> Manhattan</label>
+    <label><input type="checkbox" value="88" name="cities[]" checked="checked"> Buffalo</label>
+
+    <input type="submit" value="Search">
+</form>
