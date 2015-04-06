@@ -2,3 +2,5 @@
                           &includeTVs=`1` &processTVs=`1` &limit=`3`]]
 
 [[!getImageList? &tvname=`migx-faq` &docid=`57` &tpl=`FooterFAQ` &where=`{"active:=":"1","MIGX_id:=":"[[#8.tv.single-faq]]"}`]]
+
+[[+content_type:isnt=`1`:then=`<h4 class="download">`:else=`<h4 class="content-header">`]]

@@ -18,3 +18,12 @@ $c->where(array(
         'modResource.template' => 4
     ));
 $events = $modx->getCollection('modResource',$c);
+
+/* get the extended field named "color": */
+$fields = $profile->get('extended');
+$color = $fields['color'];
+/* set the color field to red */
+$fields = $profile->get('extended');
+$fields['color'] = 'red';
+$profile->set('extended',$fields);
+$profile->save();

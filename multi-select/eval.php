@@ -3,11 +3,11 @@ $output = $modx->runSnippet('getResources',array(
    'context'=>$modx->resource->getOne('Context')->key,
    'parents'=>'0',
    'where'=>'{
-   'published:=': 1,
-   'parent:=': 0,
-   'id:!=':237,
-   'AND:id:!=':1
-}',
+	   "published:=": 1,
+	   "parent:=": 0,
+	   "id:!=":237,
+	   "AND:id:!=":1
+	}',
 'tpl'=>'@INLINE [[+pagetitle]]==[[+id]]',
 'outputSeparator'=>'||',
 'sortby'=>'menuindex',
