@@ -14,4 +14,4 @@ $output = $modx->runSnippet('getResources',array(
 'sortdir'=>'ASC',
 'limit'=>'0',
 'showHidden'=>true));
-return '- Выберите свойство==||' . $output;
+return '- Select resource==||' . $output;
