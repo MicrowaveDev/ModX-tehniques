@@ -23,7 +23,5 @@ $events = $modx->getCollection('modResource',$c);
 $fields = $profile->get('extended');
 $color = $fields['color'];
 /* set the color field to red */
-$fields = $profile->get('extended');
-$fields['color'] = 'red';
 $profile->set('extended',$fields);
 $profile->save();
