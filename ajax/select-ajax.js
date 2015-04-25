@@ -10,24 +10,27 @@ if($('select.ajax').length){
                 $child.prop('disabled', 'disabled');
                 return;
             }
-            $.post('ajax/children-names', {parent: id, template: $_parent.data('template'), depth: $_parent.data('depth') || 2},
-                function(data){
-                    var notSelect = $child.data('not-select') || 'Не выбрано';
-                    var result = '<option value="">'+notSelect+'</option>';
-                    var selected = $('#' + $_parent.data('to') + '-hidden').val();
-                    for (var id in data) {
-                        if (data.hasOwnProperty(id)) {
-                           result += '<option value="'
-                                        + id + '"'
-                                        + ((selected==id) ? 'selected="selected"' : '') + '>'
-                                        + data[id] + '</option>';
-                        }
+            $.post($_parent.data('url') || 'ajax/children-names', {
+                parent: id,
+                template: $_parent.data('template'),
+                context: $_parent.data('context'),
+                depth: $_parent.data('depth')
+            }, function(data){
+                var notSelect = $child.data('not-select') || 'РќРµ РІС‹Р±СЂР°РЅРѕ';
+                var result = '<option value="">' + notSelect + '</option>';
+                var selected = $('#' + $_parent.data('to') + '-hidden').val();
+                for (var id in data) {
+                    if (data.hasOwnProperty(id)) {
+                       result += '<option value="'
+                                    + id + '"'
+                                    + ((selected==id) ? 'selected="selected"' : '') + '>'
+                                    + data[id] + '</option>';
                     }
-
-                    $child.html(result);
-                    $child.removeAttr("disabled");
                 }
-            );
+
+                $child.html(result);
+                $child.removeAttr("disabled");
+            });
         }
 
         $parent.change(function(){
