@@ -25,3 +25,6 @@ $color = $fields['color'];
 /* set the color field to red */
 $profile->set('extended',$fields);
 $profile->save();
+
+# Начало работы с кастомным пакетом, например созданным в MIGX
+$modx->addPackage('customPackage',MODX_BASE_PATH.'core/components/customPackage/model/','modx_');
