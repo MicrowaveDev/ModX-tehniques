@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <model package="mypackage" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
-    <object class="firstObject" table="first_objects" extends="xPDOSimpleObject">
+    <object class="firstObject" table="mypackage_first_objects" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
         <field key="date" dbtype="datetime" phptype="datetime" null="true"/>
         <field key="description" dbtype="text" phptype="string" null="false" default="" />
@@ -16,7 +16,7 @@
         <aggregate alias="modUser" class="modUser" local="mod_user" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
-    <object class="secondObject" table="second_objects" extends="xPDOSimpleObject">
+    <object class="secondObject" table="mypackage_second_objects" extends="xPDOSimpleObject">
         <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
 
         <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
