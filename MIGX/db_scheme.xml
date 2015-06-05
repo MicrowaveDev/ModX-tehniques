@@ -13,7 +13,7 @@
         <field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
 
         <aggregate alias="University" class="myUniversity" local="university" foreign="id" cardinality="one" owner="foreign" />
-        <aggregate alias="modUser" class="modUser" local="mod_user" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="User" class="modUser" local="mod_user" foreign="id" cardinality="one" owner="foreign" />
     </object>
 
     <object class="myUniversity" table="my_universities" extends="xPDOSimpleObject">
