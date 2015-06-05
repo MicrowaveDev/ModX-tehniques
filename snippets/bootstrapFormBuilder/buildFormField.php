@@ -1,5 +1,5 @@
 <?php
-# [[!formField? &name=`phone` &type=`tel`]]
+# [[!buildFormField? &name=`phone` &type=`tel`]]
 $namespace = 'profcom';
 $labelColMd = 4;
 $labelColLg = 3;
@@ -25,6 +25,10 @@ $labelDiv =   '<div class="' . $labelClasses . ' text-right">' .
 
 if(!$type) {
     switch($name){
+        case "number":
+        case "count":
+           $type = "number";
+           break;
         case "email":
            $type = "email";
            break;

@@ -1,5 +1,5 @@
 <?php
-# [[generateFormFields? &names=`[[*multi-reg-fields?]]` &required=`[[*multi-reg-required-fields?]]`]]
+# [[buildForm? &names=`[[*multi-reg-fields?]]` &required=`[[*multi-reg-required-fields?]]`]]
 if(!$names)
     return;
 
