@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model package="mypackage" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="firstObject" table="first_objects" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="date" dbtype="datetime" phptype="datetime" null="true"/>
+        <field key="description" dbtype="text" phptype="string" null="false" default="" />
+
+        <field key="second_object" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="mod_user" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+
+        <aggregate alias="Second" class="secondObject" local="second_object" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="modUser" class="modUser" local="mod_user" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="secondObject" table="second_objects" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+
+        <composite alias="Firsts" class="firstObject" local="id" foreign="second_object" cardinality="many" owner="local" />
+    </object>
+</model>
