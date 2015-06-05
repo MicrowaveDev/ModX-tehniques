@@ -28,3 +28,21 @@ $profile->save();
 
 # Начало работы с кастомным пакетом, например созданным в MIGX
 $modx->addPackage('customPackage',MODX_BASE_PATH.'core/components/customPackage/model/','modx_');
+
+# Создание запроса и поиск по TV
+$c = $modx->newQuery('modResource');
+$c->where(array(
+        'TemplateVar.name:IN' => array('beginDate','endDate'),
+        'TemplateVarResources.value:>=' => $firstDate,
+        'TemplateVarResources.value:<=' => $lastDate,
+        'modResource.template' => 4
+   ));
+$c->sortby('id','DESC');
+
+$lastuser = $modx->getObject('modResource', $c);
+
+# Создание ресурса
+$resource = $modx->newObject('modResource');
+$resource->fromArray(array('pagetitle'=>'Заголовок ресурса', 'publishedon'=> date("Y-m-d H:i:s")));
+$resource->save();
+return $resource->get('id');
