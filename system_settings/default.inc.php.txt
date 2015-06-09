@@ -1,0 +1,6 @@
+<?php
+/**
+ * Default Language file for current site
+ */
+
+$_lang['sitename.example'] = 'Example words';
