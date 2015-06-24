@@ -39,10 +39,14 @@ $c->where(array(
    ));
 $c->sortby('id','DESC');
 
-$lastuser = $modx->getObject('modResource', $c);
+$lastresource = $modx->getObject('modResource', $c);
 
 # Создание ресурса
 $resource = $modx->newObject('modResource');
 $resource->fromArray(array('pagetitle'=>'Заголовок ресурса', 'publishedon'=> date("Y-m-d H:i:s")));
 $resource->save();
 return $resource->get('id');
+
+# Взять контент из локального json
+$json = file_get_contents(MODX_BASE_PATH . 'dev/file.json');
+$result = $modx->fromJSON($result);
