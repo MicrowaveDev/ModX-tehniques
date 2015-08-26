@@ -1,23 +1,23 @@
 {
   "formtabs":[
     {
-      "MIGX_id":6,
+      "MIGX_id":1,
       "caption":"\u0418\u043d\u0444\u043e",
       "print_before_tabs":"0",
       "fields":[
         {
-          "MIGX_id":17,
-          "field":"image",
-          "caption":"\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
-          "description":"",
+          "MIGX_id":1,
+          "field":"icon",
+          "caption":"\u0418\u043c\u044f \u0438\u043a\u043e\u043d\u043a\u0438",
+          "description":"\u0418\u043a\u043e\u043d\u043a\u0430 \u043f\u043e \u0438\u043c\u0435\u043d\u0438 \u0432\u044b\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044f \u0441 \u0441\u0430\u0439\u0442\u0430 http:\/\/fortawesome.github.io\/Font-Awesome\/icons\/",
           "description_is_code":"0",
-          "inputTV":"image",
+          "inputTV":"",
           "inputTVtype":"",
           "validation":"",
           "configs":"",
           "restrictive_condition":"",
           "display":"",
-          "sourceFrom":"tv",
+          "sourceFrom":"config",
           "sources":"",
           "inputOptionValues":"",
           "default":"",
@@ -25,8 +25,8 @@
           "pos":1
         },
         {
-          "MIGX_id":18,
-          "field":"url",
+          "MIGX_id":2,
+          "field":"link",
           "caption":"\u0421\u0441\u044b\u043b\u043a\u0430",
           "description":"",
           "description_is_code":"0",
@@ -44,7 +44,7 @@
           "pos":2
         },
         {
-          "MIGX_id":19,
+          "MIGX_id":3,
           "field":"active",
           "caption":"\u0410\u043a\u0442\u0438\u0432\u043d\u044b\u0439",
           "description":"",
@@ -80,10 +80,10 @@
     "multiple_formtabs_field":"",
     "multiple_formtabs_optionstext":"",
     "multiple_formtabs_optionsvalue":"",
-    "actionbuttonsperrow":4,
+    "actionbuttonsperrow":1,
     "winbuttonslist":"",
     "extrahandlers":"this.handleColumnSwitch",
-    "filtersperrow":4,
+    "filtersperrow":1,
     "packageName":"",
     "classname":"",
     "task":"",
@@ -118,24 +118,25 @@
       "show_in_grid":"no"
     },
     {
-      "MIGX_id":4,
-      "header":"\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
-      "dataIndex":"image",
-      "width":70,
-      "sortable":"false",
+      "MIGX_id":2,
+      "header":"\u0418\u043c\u044f \u0438\u043a\u043e\u043d\u043a\u0438",
+      "dataIndex":"icon",
+      "width":80,
+      "sortable":1,
       "show_in_grid":1,
-      "renderer":"this.renderImage",
+      "renderer":"",
       "clickaction":"",
       "selectorconfig":"",
       "renderchunktpl":"",
-      "renderoptions":""
+      "renderoptions":"",
+      "editor":"this.textEditor"
     },
     {
-      "MIGX_id":2,
+      "MIGX_id":5,
       "header":"\u0421\u0441\u044b\u043b\u043a\u0430",
-      "dataIndex":"url",
-      "width":150,
-      "sortable":1,
+      "dataIndex":"link",
+      "width":120,
+      "sortable":"false",
       "show_in_grid":1,
       "renderer":"",
       "clickaction":"",
@@ -172,7 +173,8 @@
           "handler":"",
           "image":"assets\/img\/empty-tick.png"
         }
-      ]
+      ],
+      "editor":""
     }
   ]
 }

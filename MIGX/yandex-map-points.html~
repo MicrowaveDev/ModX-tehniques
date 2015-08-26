@@ -1,6 +1,7 @@
-<!-- yandexMap tpl chunk: -->
-<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<!-- To head: -->
+<!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
 
+<!-- yandexMap tpl chunk: -->
 [[*migx-map-points:notempty=`
    <p id="partnerMap" style="width: 265px; height: 222px"></p>
    <script type="text/javascript">
@@ -10,8 +11,8 @@
 
        function init(){
            myMap = new ymaps.Map("partnerMap", {
-               center: [ [[*x_center:default=`55.75396`]], [[*y_center:default=`55.75396`]] ],
-               zoom:[[*zoom:default=`7`]],
+               center: [ [[*x_center]], [[*y_center]] ],
+               zoom:[[*zoom:default:7]],
                controls: ['smallMapDefaultSet']
            });
 
@@ -22,9 +23,9 @@
 
 <!-- mapPoint tpl chunk: -->
 [[+active:is=`1`:then=`
-   var myPlacemark = new ymaps.Placemark([ [[+coord_x:default=`55.75396`]], [[+coord_y:default=`55.75396`]] ], {
-               hintContent: "[[+hint_content:default=`при наведении`]]",
-               balloonContent: "[[+balloon_content:default=`при нажатии`]]"
+   var myPlacemark = new ymaps.Placemark([ [[+coord_x]], [[+coord_y]] ], {
+               hintContent: "[[+hint_content]]",
+               balloonContent: "[[+balloon_content]]"
            });
 
    myMap.geoObjects.add(myPlacemark);

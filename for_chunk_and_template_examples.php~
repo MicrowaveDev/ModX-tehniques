@@ -22,7 +22,7 @@
 [[!FormIt?
     &hooks=`email`
     &emailTpl=`contactEmailTpl`
-    &emailSubject=`[Sitename] Сообщение с контактной формы сайта`
+    &emailSubject=`Сообщение с контактной формы сайта sitename`
     &emailTo=`[[#378.tv.email-responder?]]`
     &submitVar=`contactForm`
 ]]

@@ -1,12 +1,12 @@
 {
   "formtabs":[
     {
-      "MIGX_id":6,
+      "MIGX_id":2,
       "caption":"\u0418\u043d\u0444\u043e",
       "print_before_tabs":"0",
       "fields":[
         {
-          "MIGX_id":17,
+          "MIGX_id":4,
           "field":"image",
           "caption":"\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
           "description":"",
@@ -25,13 +25,13 @@
           "pos":1
         },
         {
-          "MIGX_id":18,
-          "field":"url",
-          "caption":"\u0421\u0441\u044b\u043b\u043a\u0430",
+          "MIGX_id":5,
+          "field":"text",
+          "caption":"\u041f\u043e\u044f\u0441\u043d\u0435\u043d\u0438\u044f",
           "description":"",
           "description_is_code":"0",
           "inputTV":"",
-          "inputTVtype":"",
+          "inputTVtype":"richtext",
           "validation":"",
           "configs":"",
           "restrictive_condition":"",
@@ -40,11 +40,10 @@
           "sources":"",
           "inputOptionValues":"",
           "default":"",
-          "useDefaultIfEmpty":"0",
           "pos":2
         },
         {
-          "MIGX_id":19,
+          "MIGX_id":6,
           "field":"active",
           "caption":"\u0410\u043a\u0442\u0438\u0432\u043d\u044b\u0439",
           "description":"",
@@ -132,9 +131,9 @@
     },
     {
       "MIGX_id":2,
-      "header":"\u0421\u0441\u044b\u043b\u043a\u0430",
-      "dataIndex":"url",
-      "width":150,
+      "header":"\u041f\u043e\u044f\u0441\u043d\u0435\u043d\u0438\u044f",
+      "dataIndex":"text",
+      "width":230,
       "sortable":1,
       "show_in_grid":1,
       "renderer":"",
