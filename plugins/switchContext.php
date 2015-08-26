@@ -1,4 +1,5 @@
 <?php
+# OnHandleRequest
 if($modx->context->get('key') != "mgr"){
     /* grab the current langauge from the cultureKey request var */
     switch ($_REQUEST['cultureKey']) {
