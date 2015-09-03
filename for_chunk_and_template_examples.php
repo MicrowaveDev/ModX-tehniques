@@ -10,6 +10,7 @@
 <ul>
 	  [[!getImageList?
 	  &tvname=`myMIGXtv`
+	  &where=`{"active:=":"1"}`
 	  &tpl=`@CODE:
 	      <li>[[+idx]]<img src="[[+image]]"/><p>[[+title]]</p></li>
 	  `]]
@@ -36,3 +37,18 @@
 <title>[[*seo-title:isempty=`[[++site_name]] - [[*pagetitle]]`]]</title>
 <meta name="description" content="[[*meta-description:isempty=`[[*description]]`]]" />
 <meta name="keywords" content="[[*meta-keywords?]]" />
+
+<!-- Fenom example -->
+<div class="col-md-4">
+    <a target="_blank" href="{$url}"><img src="{$image}"/></a>
+</div>
+{if $idx % 3 == 0 && $idx % 9 != 0}
+    </div><div class="row vertical-align">
+{/if}
+{if $idx % 9 == 0}
+    </div></div>
+{/if}
+{if $idx % 9 == 0 && $totalPartners > $idx}
+    <div class="vertical-align-xs"><div class="row vertical-align">
+{/if}
+

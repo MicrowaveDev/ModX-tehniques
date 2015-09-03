@@ -1,48 +1,10 @@
 {
   "formtabs":[
     {
-      "MIGX_id":6,
+      "MIGX_id":5,
       "caption":"\u0418\u043d\u0444\u043e",
       "print_before_tabs":"0",
       "fields":[
-        {
-          "MIGX_id":18,
-          "field":"url",
-          "caption":"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u0441\u044b\u043b\u043a\u0443",
-          "description":"",
-          "description_is_code":"0",
-          "inputTV":"",
-          "inputTVtype":"",
-          "validation":"",
-          "configs":"",
-          "restrictive_condition":"",
-          "display":"",
-          "sourceFrom":"config",
-          "sources":"",
-          "inputOptionValues":"",
-          "default":"",
-          "useDefaultIfEmpty":"0",
-          "pos":1
-        },
-        {
-          "MIGX_id":28,
-          "field":"file",
-          "caption":"\u0418\u043b\u0438 \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u0430\u0439\u043b",
-          "description":"\u0421\u0441\u044b\u043b\u043a\u0430 \u043f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442\u043d\u0435\u0435",
-          "description_is_code":"0",
-          "inputTV":"file",
-          "inputTVtype":"",
-          "validation":"",
-          "configs":"",
-          "restrictive_condition":"",
-          "display":"",
-          "sourceFrom":"tv",
-          "sources":"",
-          "inputOptionValues":"",
-          "default":"",
-          "useDefaultIfEmpty":"0",
-          "pos":2
-        },
         {
           "MIGX_id":17,
           "field":"image",
@@ -60,26 +22,26 @@
           "inputOptionValues":"",
           "default":"",
           "useDefaultIfEmpty":"0",
-          "pos":3
+          "pos":1
         },
         {
-          "MIGX_id":20,
-          "field":"image-h",
-          "caption":"\u0418\u043a\u043e\u043d\u043a\u0430 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438",
+          "MIGX_id":15,
+          "field":"url",
+          "caption":"\u0421\u0441\u044b\u043b\u043a\u0430",
           "description":"",
           "description_is_code":"0",
-          "inputTV":"image",
+          "inputTV":"",
           "inputTVtype":"",
           "validation":"",
           "configs":"",
           "restrictive_condition":"",
           "display":"",
-          "sourceFrom":"tv",
+          "sourceFrom":"config",
           "sources":"",
           "inputOptionValues":"",
           "default":"",
           "useDefaultIfEmpty":"0",
-          "pos":4
+          "pos":2
         },
         {
           "MIGX_id":19,
@@ -94,7 +56,7 @@
           "sources":"[]",
           "inputOptionValues":"\u0410\u043a\u0442\u0438\u0432\u043d\u044b\u0439==1||\u0421\u043a\u0440\u044b\u0442\u044b\u0439==0",
           "default":1,
-          "pos":5
+          "pos":3
         }
       ],
       "pos":1
@@ -157,7 +119,7 @@
     },
     {
       "MIGX_id":4,
-      "header":"\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
+      "header":"\u0418\u043a\u043e\u043d\u043a\u0430",
       "dataIndex":"image_render",
       "width":70,
       "sortable":"false",
@@ -165,32 +127,18 @@
       "renderer":"this.renderChunk",
       "clickaction":"",
       "selectorconfig":"",
-      "renderchunktpl":"<div style=\"background:black;\">\n<image src=\"\/upload\/[[+image]]\"\/>\n<\/div>",
-      "renderoptions":"",
-      "editor":""
-    },
-    {
-      "MIGX_id":5,
-      "header":"\u041d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0435",
-      "dataIndex":"image-h_render",
-      "width":70,
-      "sortable":"false",
-      "show_in_grid":1,
-      "renderer":"this.renderChunk",
-      "clickaction":"",
-      "selectorconfig":"",
-      "renderchunktpl":"<div style=\"background:black;\">\n<image src=\"\/upload\/[[+image-h]]\"\/>\n<\/div>",
+      "renderchunktpl":"<div style=\"background:black; display: inline-block;\">\n<image src=\"\/upload\/[[+image]]\"\/>\n<\/div>",
       "renderoptions":"",
       "editor":""
     },
     {
       "MIGX_id":2,
       "header":"\u0421\u0441\u044b\u043b\u043a\u0430",
-      "dataIndex":"url_render",
+      "dataIndex":"url",
       "width":230,
       "sortable":1,
       "show_in_grid":1,
-      "renderer":"this.renderChunk",
+      "renderer":"",
       "clickaction":"",
       "selectorconfig":"",
       "renderchunktpl":"[[+url:default=`[[+file]]`]]",

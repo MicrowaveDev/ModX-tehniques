@@ -1,0 +1,32 @@
+#!/bin/bash
+
+sudo mkdir /var/www/$1.narleyn.ru/docs/core/components
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/core/components
+
+sudo mkdir /var/www/$1.narleyn.ru/docs/core/model/modx
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/core/model/modx
+
+sudo mkdir /var/www/$1.narleyn.ru/docs/manager/components
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/manager/components
+
+sudo mkdir /var/www/$1.narleyn.ru/docs/assets
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/assets
+
+sudo mkdir /var/www/$1.narleyn.ru/docs/markup
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/markup
+
+sudo mkdir /var/www/$1.narleyn.ru/docs/manager/assets/components
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/manager/assets/components
+
+touch /var/www/$1.narleyn.ru/docs/core/config/config.inc.php
+sudo chmod 777 /var/www/$1.narleyn.ru/docs/core/config/config.inc.php
+
+sudo chmod 777 /var/www/$1.narleyn.ru/docs/ht.access
+
+sudo chmod 777 /var/www/$1.narleyn.ru/docs/
+
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/core/export
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/core/import
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/core/cache
+sudo chmod -R 777 /var/www/$1.narleyn.ru/docs/core/packages
+

@@ -1,6 +1,8 @@
 <?php
 /**
- * Default Language file for current site
+ * Default Language file for current site.
+ * Use:
+ * [[!%sitename.example? &namespace=`sitename` &language=`ru`]]
  */
 
 $_lang['sitename.example'] = 'Example words';
