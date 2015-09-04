@@ -123,7 +123,12 @@
     "join_alias":"",
     "has_jointable":"yes",
     "getlistwhere":"",
-    "joins":"",
+    "joins":[
+      {
+        "alias":"University",
+        "selectfields":"name"
+      }
+    ],
     "hooksnippets":"",
     "cmpmaincaption":"\u041c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u0411\u0414 \"\u0421\u0442\u0443\u0434\u0435\u043d\u0442\u044b, \u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u044b\"",
     "cmptabcaption":"\u0421\u0442\u0443\u0434\u0435\u043d\u0442\u044b",
@@ -165,14 +170,14 @@
     {
       "MIGX_id":5,
       "header":"\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442",
-      "dataIndex":"university_render",
+      "dataIndex":"University_name",
       "width":"",
       "sortable":"false",
       "show_in_grid":1,
-      "renderer":"this.renderChunk",
+      "renderer":"",
       "clickaction":"",
       "selectorconfig":"",
-      "renderchunktpl":"[[!objectName? &id=`[[+university]]` &class=`myUniversity`]]",
+      "renderchunktpl":"",
       "renderoptions":"",
       "editor":""
     },
