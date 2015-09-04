@@ -7,18 +7,6 @@ $document = $modx->getObject('modResource',array(
     'pagetitle' => 'Телефоны'
 ));
 
-# выборка ресурсов по TV
-$c = $modx->newQuery('modResource');
-$c->innerJoin('modTemplateVarResource','TemplateVarResources');
-$c->innerJoin('modTemplateVar','TemplateVar','`TemplateVar`.`id` = `TemplateVarResources`.`tmplvarid`');
-$c->where(array(
-        'TemplateVar.name:IN' => array('beginDate','endDate'),
-        'TemplateVarResources.value:>=' => $firstDate,
-        'TemplateVarResources.value:<=' => $lastDate,
-        'modResource.template' => 4
-    ));
-$events = $modx->getCollection('modResource',$c);
-
 /* get the extended field named "color": */
 $fields = $profile->get('extended');
 $color = $fields['color'];
@@ -31,6 +19,8 @@ $modx->addPackage('customPackage',MODX_BASE_PATH.'core/components/customPackage/
 
 # Создание запроса и поиск по TV
 $c = $modx->newQuery('modResource');
+$c->innerJoin('modTemplateVarResource','TemplateVarResources');
+$c->innerJoin('modTemplateVar','TemplateVar','`TemplateVar`.`id` = `TemplateVarResources`.`tmplvarid`');
 $c->where(array(
         'TemplateVar.name:IN' => array('beginDate','endDate'),
         'TemplateVarResources.value:>=' => $firstDate,
