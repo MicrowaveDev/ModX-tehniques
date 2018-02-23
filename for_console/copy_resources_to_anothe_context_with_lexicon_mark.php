@@ -100,7 +100,7 @@ function copyResourceToTarget(&$resource, $modx, $from, $target){
         if($parent !== 0)
             copyResourceToTarget($modx->getObject('modResource', $parent), $modx, $from, $target);
 
-        copyResourceToTarget(&$resource, $modx, $from, $target);
+        copyResourceToTarget($resource, $modx, $from, $target);
     }
 }
 
@@ -110,6 +110,6 @@ foreach($resources as $resource){
     $resource_in_target = getIdResourceInTarget($resource->get('id'), $modx, $target);
 
     if(empty($resource_in_target))
-        copyResourceToTarget(&$resource, $modx, $from, $target);
+        copyResourceToTarget($resource, $modx, $from, $target);
 }
 return 'done';
